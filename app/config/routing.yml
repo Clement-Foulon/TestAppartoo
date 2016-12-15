@@ -1,0 +1,14 @@
+test_user:
+    resource: "@TestUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+user_bundle:
+   resource: "@TestUserBundle/Resources/config/routing.yml"
+   
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

@@ -1,0 +1,38 @@
+fos_user_security:
+   resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+   resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+   prefix: /profile
+
+fos_user_register:
+   resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+   prefix: /register
+
+fos_user_resetting:
+   resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+   prefix: /resetting
+
+fos_user_change_password:
+   resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+   prefix: /profile
+   
+test_user_accueil:
+    defaults: { _controller: TestUserBundle:Default:accueil }
+    path: /accueil
+
+test_user_modification:
+    defaults: { _controller: TestUserBundle:Default:modification }
+    path: /modification/{id}
+    
+test_user_create:
+    defaults: { _controller: TestUserBundle:Default:create }
+    path: /create
+    
+test_user_detail:
+    defaults: { _controller: TestUserBundle:Default:detail }
+    path: /detail/{id}
+
+test_user_delete:
+    defaults: { _controller: TestUserBundle:Default:delete }
+    path: /delete/{id}

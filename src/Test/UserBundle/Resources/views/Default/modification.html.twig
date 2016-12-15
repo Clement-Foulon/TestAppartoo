@@ -1,0 +1,98 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    
+<h2 align="center" style="margin-bottom: 2%">Modification du contact {{contact.Prenom}} {{contact.Nom}}</h2>
+<div class="container">
+    <form method="post" class="form-horizontal">
+
+        <div class="form-group">
+            <div class="col-lg-5 control-label">
+            {{ form_label(form.prenom, "Prenom")}}  
+            </div>     
+            <div class="col-lg-3">
+            {{form_widget(form.prenom,{'attr': {'class': ' form-control'}})}}
+            </div>
+        </div>    
+        {{form_errors(form.prenom)}}
+       
+        <div class="form-group">
+            <div class="col-lg-5 control-label">
+            {{ form_label(form.nom, "Nom")}}
+            </div>
+            <div class="col-lg-3">
+            {{form_widget(form.nom,{'attr': {'class': 'form-control'}})}}
+            </div>
+        </div>
+        {{ form_errors(form.nom) }}
+      
+        <div class="form-group">
+            <div class="col-lg-5 control-label">
+            {{ form_label(form.mail, "E-Mail")}}
+            </div>
+            <div class="col-lg-3">
+            {{form_widget(form.mail,{'attr': {'class': 'form-control'}})}}
+            </div>
+        </div>
+        {{ form_errors(form.mail) }}
+        
+        <div class="form-group">
+            <div class="col-lg-5 control-label">
+            {{ form_label(form.adresse, "Adresse")}}
+            </div>
+            <div class="col-lg-3">
+            {{form_widget(form.adresse,{'attr': {'class': 'form-control'}})}}
+            </div>
+        </div>
+        {{ form_errors(form.adresse) }}
+        
+        <div class="form-group">
+            <div class="col-lg-5 control-label">
+            {{ form_label(form.codePostal, "Code Postal")}}
+            </div>
+            <div class="col-lg-3">
+            {{form_widget(form.codePostal,{'attr': {'class': 'form-control'}})}}
+            </div>
+        </div>
+        {{ form_errors(form.codePostal) }}
+        
+        <div class="form-group">
+            <div class="col-lg-5 control-label">
+            {{ form_label(form.ville, "Ville")}}
+            </div>
+            <div class="col-lg-3">
+            {{form_widget(form.ville,{'attr': {'class': 'form-control'}})}}
+            </div>
+        </div>
+        {{ form_errors(form.ville) }}
+        
+        <div class="form-group">
+            <div class="col-lg-5 control-label">
+            {{ form_label(form.tel, "Téléphone")}}
+            </div>
+            <div class="col-lg-3">
+            {{form_widget(form.tel,{'attr': {'class': 'form-control'}})}}
+            </div>
+        </div>
+        {{ form_errors(form.tel) }}
+        
+         <div class="form-group">
+            <div class="col-lg-5 control-label">
+            {{ form_label(form.siteWeb, "Site Web")}}
+            </div>
+            <div class="col-lg-3">
+            {{form_widget(form.siteWeb,{'attr': {'class': 'form-control'}})}}
+            </div>
+        </div>
+        {{ form_errors(form.siteWeb) }}
+     
+         <div class="form-group">
+            <div class="col-lg-offset-5 col-lg-3">
+            {{form_widget(form.save,{'attr': {'class': 'form-control btn btn-default'}})}}
+            </div>
+        </div>      
+            
+    </form>
+</div>
+{% endblock %}
+

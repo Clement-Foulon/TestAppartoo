@@ -1,0 +1,25 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h2 align="center" style="margin-bottom: 2%">Detail du contact {{contact.Prenom}} {{contact.Nom}}</h2>
+    <div class="container" align="center">
+        <ul class="list-group col-lg-offset-4 col-lg-4">
+            <li class="list-group-item">Prenom: {{ contact.Prenom }}</li>
+            <li class="list-group-item">Nom: {{ contact.Nom }}</li>
+            <li class="list-group-item">E-Mail: {{ contact.Mail }}</li>
+            <li class="list-group-item">Adresse: {{ contact.Adresse }}</li>
+            <li class="list-group-item">Code Postal: {{ contact.CodePostal }}</li>
+            <li class="list-group-item">Ville: {{ contact.Ville }}</li>  
+            <li class="list-group-item">Téléphone: {{ contact.Tel }}</li>
+            <li class="list-group-item">Site Web: {{ contact.SiteWeb }}</li>
+        </ul>
+
+        <div>
+            <form class="col-lg-offset-5 col-lg-4">
+                <button type="submit" class="btn btn-default col-lg-5" formaction="http://localhost/TestAppartoo/web/app_dev.php/accueil">Retour</button>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}
